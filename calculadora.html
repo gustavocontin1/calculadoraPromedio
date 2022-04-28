@@ -7,22 +7,23 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="img/logo-cp.jpg">
+    <script src="https://kit.fontawesome.com/166c412646.js" crossorigin="anonymous"></script>
     <title>Cal-Prome | Promedio</title>
 </head>
 <body>
     <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.html"><img src="img/logo-cp.jpg" alt="logo" width="60" height="45">Cal-Prome</a>
+        <a class=" logo navbar-brand" href="index.html"><img src="img/logo-cp.jpg" alt="logo" width="60" height="45">Cal-Prome</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="ubicacion collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-            <li class="nav-item active">
+            <li class="nav-item">
             <a class="nav-link" href="index.html">Inicio<span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
-            <a class="nav-link" href="calculadora.html">Sacar Promedios</a>
+            <li class="nav-item active">
+            <a class="nav-link disable" href="calculadora.html">Sacar Promedios</a>
             </li>
         </ul>
         </div>
@@ -35,41 +36,40 @@
                 <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum cumque suscipit sed dicta fugit, quod dolore optio! Recusandae, consectetur? Recusandae.</p>
             </div>
         </div>
+        <h2 class="titulo">Calcular de Promedios de Notas</h2>
+            <div class="contenedor-form">
+                <p class="sub-alineacion">Ingrese los numeros necesarios para sacar su promedio.</p>
+                <form class="formulario" id="miFormulario">
+                    <div class="campos">
+                        <label for="nombre">Nombre</label>
+                        <input class="field" id="nom" type="text" name="nombre" placeholder="Escribe tu nombre">
+                    </div>
+                    <div class="campos">
+                        <label for="numero">Números</label>
+                        <input class="field" id="num1" type="number" name="numero" placeholder="Escribe tu número" required>
 
-        <div>
-            <h2>Calcular Promedio de Notas</h2>
-            <p>Ingrese los numeros necesarios para sacar su promedio.</p>
-            <form id="miFormulario">
-                <div class="campos">
-                    <label for="nombre">Nombre</label>
-                    <input id="nom" type="text" name="nombre" placeholder="Escribe tu nombre">
-                </div>
-                <div class="campos">
-                    <label for="numero">Números</label>
-                    <input id="num1" type="number" name="numero" placeholder="Escribe tu número" required>
-                </div>
-                <div class="campos">
-                    <p>+</p>
-                    <input id="num2" type="number" name="numero2" placeholder="Escribe tu número" required>
-                </div>
-                <div class="campos">
-                    <p>+</p>
-                    <input id="num3" type="number" name="numero3" placeholder="Escribe tu número" required>
-                </div>
-                <button id="btnTotal" type="submit" class="btn btn-primary" value="Total">Total</button> 
-                <button id="btnBorrar" type="reset" class="btn btn-primary" value="Borrar" name="btnLimpiar">Borrar</button>
-                <div>
-            </form>
-                <p>Tu promedio</p>
-                <ul id="promedio"></ul>
+                        <p>+</p>
+
+                        <input class="field" id="num2" type="number" name="numero2" placeholder="Escribe tu número" required>
+
+                        <p>+</p>
+
+                        <input class="field" id="num3" type="number" name="numero3" placeholder="Escribe tu número" required>
+                    </div>
+                    <button id="btnTotal" type="submit" class="btn btn-primary" value="Total">Total</button> 
+                    <button id="btnBorrar" type="reset" class="btn btn-primary" value="Borrar" name="btnLimpiar">Borrar</button>
+                    <div>
+                </form>
+                    <h3 class="promediofinal"> Tus promedios:</h3>
+                    <ul class="contenedor-promedio" id="promedio"></ul>
             </div>
         </div>
     </main>
-    <footer>
-        <nav>
-            <ul>
-                <li><a href="index.html">Incio</a></li>
-                <li><a href="calculadora.html">Calcular Promedios</a></li> 
+    <footer class="footer">
+        <nav class="barranav">
+            <ul class="lista">
+                <li class="fa-solid fa-house lista2"><a class="enlace" href="index.html">Incio</a></li>
+                <li class="lista2"><i class="fa-solid fa-calculator"><a class="enlace" href="calculadora.html">Calcular Promedios</a></i></li> 
             </ul>
         </nav>
         <p>Todos los derechos reservados. Cal-Prome 2022.</p>

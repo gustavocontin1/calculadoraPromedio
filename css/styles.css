@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 .logo{
     font-size: 1.3rem;
@@ -22,6 +23,9 @@
     background-size: cover;
     margin: 0;
 }
+.display-4{
+    font-weight: 900;
+}
 
 .titulo{
     height: 4rem;
@@ -30,4 +34,115 @@
     justify-content: center;
     align-items: center;
     background-color: #E0E4CC;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+.alineacion{
+    margin-top: .8rem;
+}
+.cuadro{
+    border: 5px solid rgba(113, 113, 113, 0.261);
+    padding: .5rem .8rem ;
+}
+
+.info{
+    height: 350px;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(167, 219, 216, 0.355);
+}
+.contenedor-form{
+    background-color:rgba(167, 219, 216, 0.355) ;
+}
+.sub-alineacion{
+    text-align: center;
+    margin: 0rem 0rem .9rem 0rem;
+    font-weight: 500;
+    
+}
+
+.formulario{
+    border-radius:3px;
+    background-color: white;
+    color: #999;
+    font-size: 0.8rem;
+    padding: 20px;
+    margin: 0 auto;
+    width: 300px;
+}
+
+input,textarea{
+    border: 0;
+    outline: none;
+    width:280;
+}
+.field{
+    border: solid 1px #ccc;
+    padding: 10px;
+    margin: .5rem;
+}
+.field:focus{
+    border-color: rgba(181, 219, 167, 0.355);
+}
+.ul{
+    height: 200px;
+}
+
+.contenedor-promedio{
+    height: 0px;
+    margin-bottom: 50px;
+
+}
+.promediofinal{
+    font-size: 1rem;
+    margin: 1rem;
+    font-weight: 700;
+    text-decoration: underline;
+}
+.footer{
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:rgb(250,105,0) ;
+}
+
+.lista{
+    margin: .8rem;
+    padding: .8rem;
+    display: flex;
+    flex-direction: column;
+}
+.lista2 {
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    
+}
+.enlace{
+    color: black;
+    font-size: 1.2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: .5rem;
+}
+
+.enlace:hover{
+    text-decoration: none;
+    color: rgb(239, 180, 134);
+}
+
+.fa-solid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .2rem;
+}
+.fa-solid:hover{
+    text-decoration: none;
+    color: rgb(239, 180, 134);
 }

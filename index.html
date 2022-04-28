@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="img/logo-cp.jpg">
+  <script src="https://kit.fontawesome.com/166c412646.js" crossorigin="anonymous"></script>
   <title>Cal-Prome | Inicio</title>
 </head>
 <body>
@@ -19,7 +20,7 @@
         <div class="ubicacion collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link" href="index.html">Inicio<span class="sr-only">(current)</span></a>
+              <a class="nav-link disable" href="index.html">Inicio<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="calculadora.html">Sacar Promedios</a>
@@ -38,23 +39,23 @@
       <div>
         <h2 class="titulo">Calculadora de Promedios de Notas</h2>
       </div>
-      <div>
-        <h3>¿Como sacar un promedio?</h3>
-        <p>La Calculadora de Promedio se usa para calcular el valor promedio de cualquier conjunto de números.</p>
+      <div class="info">
+        <h3 class="alineacion">¿Como sacar un promedio?</h3>
+        <p class="alineacion">La Calculadora de Promedio se usa para calcular el valor promedio de cualquier conjunto de números.</p>
 
-        <h3>Cálculo del valor promedio</h3>
-        <p>Supongamos que tenemos un espacio de muestra a1, a2, ...., an. A continuación, el valor medio se define mediante la siguiente ecuación:</p>
-        <p>Promedio = (a 1 + a 2 + ... + a n ) / n</p>
+        <h3 class="alineacion">Cálculo del valor promedio</h3>
+        <p class="alineacion">Supongamos que tenemos un espacio de muestra a1, a2, ...., an. A continuación, el valor medio se define mediante la siguiente ecuación:</p>
+        <p class="alineacion cuadro">Promedio = (a 1 + a 2 + ... + a n ) / n</p>
 
-        <button id="btn">Calcular un promedio</button> 
-      </div>
+        <a href="calculadora.html"><button class="btn btn-info" id="btn"> Calcular un promedio</button></a> 
+      </div> 
     </main>
 
-    <footer>
-      <nav>
-        <ul>
-          <li><a href="index.html">Incio</a></li>
-          <li><a href="calculadora.html">Calcular Promedios</a></li> 
+    <footer class="footer">
+      <nav class="barranav">
+        <ul class="lista">
+          <li class="fa-solid fa-house lista2"><a class="enlace" href="index.html">Incio</a></li>
+          <li class="lista2"><i class="fa-solid fa-calculator"><a class="enlace" href="calculadora.html">Calcular Promedios</a></i></li> 
         </ul>
       </nav>
       <p>Todos los derechos reservados. Cal-Prome 2022.</p>
