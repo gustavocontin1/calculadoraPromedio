@@ -6,6 +6,8 @@ let resultadoNota
 let baseDatos = []
 let dato 
 const divPromedio = document.getElementById("promedio")
+let num4 = document.getElementById('num1')
+
 
 //Funcion para sacar el promedio
 btnTotal.onclick = function realizarPromedio(){
@@ -18,22 +20,22 @@ btnTotal.onclick = function realizarPromedio(){
 
     if(resultadoNota >= aprobado){
         console.log("Nota final de " + nombreAlumno + " es " + resultadoNota + " esta aprobado" )
-        alert (nombreAlumno + " tu nota es " + resultadoNota + ", estas aprobado!")
+        swal({
+            title: "Bien hecho!",
+            text: nombreAlumno + " tu nota es " + resultadoNota + ", estas aprobado!",
+            icon: "success",
+        });
+        baseDatos.push("Nombre: " + nombreAlumno + ", Promedio: " + resultadoNota )
     }else {
         console.log("Nota final de " + nombreAlumno + " es " + resultadoNota + " esta desaprobado" )
-        alert (nombreAlumno + " tu nota es " + resultadoNota + ", estas desaprobado")}
-
-do{
-    baseDatos.push("Nombre: " + nombreAlumno + ", Promedio: " + resultadoNota )
-    console.log(baseDatos)
-    dato = prompt("Quieres sacar otros promedios? (S/N)")
-
-    if(dato == "S".toLowerCase()) {
-    break
-    }else(dato == "N".toLowerCase())
-    break
-
-}while(true)
+        //alert (nombreAlumno + " tu nota es " + resultadoNota + ", estas desaprobado")
+        swal({
+            title: "Sigue Intentando",
+            text: nombreAlumno + " tu nota es " + resultadoNota + ", estas desaprobado!",
+            icon: "error",
+        });
+        baseDatos.push("Nombre: " + nombreAlumno + ", Promedio: " + resultadoNota )
+        }
 
 for(const promedio of baseDatos){
     const resultado = document.createElement("li")
@@ -43,7 +45,6 @@ for(const promedio of baseDatos){
     let total = []
     total.push(baseDatos)
     localStorage.setItem("Promedios", JSON.stringify(total)) }
-
 }
 
 
@@ -58,4 +59,4 @@ miFormulario.btnBorrar.addEventListener('click', function (e) {
     else console.log('Borrado')
 })
 
-//Guardar información con LocalStorage y usando JSON para pasar el array a string
+

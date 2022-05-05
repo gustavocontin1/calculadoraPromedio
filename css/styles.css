@@ -84,6 +84,7 @@ input,textarea{
     border: solid 1px #ccc;
     padding: 10px;
     margin: .5rem;
+    width: 90%;
 }
 .field:focus{
     border-color: rgba(181, 219, 167, 0.355);
