@@ -44,17 +44,18 @@
                         <label for="nombre">Nombre</label>
                         <input class="field" id="nom" type="text" name="nombre" placeholder="Escribe tu nombre">
                     </div>
-                    <div class="campos">
+                    <div class="campos" id="grupo__numero">
                         <label for="numero">Números</label>
-                        <input class="field" id="num1" type="number" min="1" name="numero" placeholder="Escribe tu número" required>
+                        <input class="field formulario__input" id="num1" type="number" min="1" name="numero" placeholder="Escribe tu nota" required>
+                        <p class="formulario__input-error">La nota ingresada tiene que ser del 1 al 10 </p>
 
                         <p>+</p>
 
-                        <input class="field" id="num2" type="number" name="numero2" placeholder="Escribe tu número" required>
+                        <input class="field formulario__input" id="num2" type="number" name="numero" placeholder="Escribe tu nota" required>
 
                         <p>+</p>
 
-                        <input class="field" id="num3" type="number" name="numero3" placeholder="Escribe tu número" required>
+                        <input class="field formulario__input" id="num3" type="number" name="numero" placeholder="Escribe tu nota" required >
                     </div>
                     <button id="btnTotal" type="submit" class="btn btn-primary" value="Total">Total</button> 
                     <button id="btnBorrar" type="reset" class="btn btn-primary" value="Borrar" name="btnLimpiar">Borrar</button>
