@@ -36,39 +36,41 @@ btnTotal.onclick = function realizarPromedio(){
     let nota2 = parseInt(document.getElementById('num2').value)
     let nota3 = parseInt(document.getElementById('num3').value)
     resultadoNota = Math.round((nota1 + nota2 + nota3) / 3)
-
-    if(resultadoNota >= aprobado){
+    
+    if(resultadoNota >= mayor){ 
+        swal({
+            title: "Ingrese nuevamente una nota",
+            text: "La nota tiene que ser numeros entre el 1 al 10, intentalo nuevamente!",
+            icon: "warning",
+        })
+    } else if(resultadoNota < mayor && resultadoNota >= aprobado){ 
         console.log("Nota final de " + nombreAlumno + " es " + resultadoNota + " esta aprobado" )
         swal({
             title: "Bien hecho!",
             text: nombreAlumno + " tu nota es " + resultadoNota + ", estas aprobado!",
             icon: "success",
         });
+        const texto = "Nombre: " + nombreAlumno + ", Promedio: " + resultadoNota
+        baseDatos.push(texto)
+        const resultado = document.createElement("li")
+        resultado.innerHTML = texto
+        divPromedio.appendChild(resultado)
         baseDatos.push("Nombre: " + nombreAlumno + ", Promedio: " + resultadoNota )
-    }else{
+    } else { 
         console.log("Nota final de " + nombreAlumno + " es " + resultadoNota + " esta desaprobado" )
         swal({
             title: "Sigue Intentando",
             text: nombreAlumno + " tu nota es " + resultadoNota + ", estas desaprobado!",
             icon: "error",
         });
+        const texto = "Nombre: " + nombreAlumno + ", Promedio: " + resultadoNota
+        baseDatos.push(texto)
+        const resultado = document.createElement("li")
+        resultado.innerHTML = texto
+        divPromedio.appendChild(resultado)
         baseDatos.push("Nombre: " + nombreAlumno + ", Promedio: " + resultadoNota )
-        }
-
-    const texto = "Nombre: " + nombreAlumno + ", Promedio: " + resultadoNota
-    baseDatos.push(texto)
-    const resultado = document.createElement("li")
-    resultado.innerHTML = texto
-    divPromedio.appendChild(resultado)
-
-    if(resultadoNota >= mayor){
-        swal({
-            title: "Ingrese nuevamente una nota",
-            text: "La nota tiene que ser numeros entre el 1 al 10, intentalo nuevamente!",
-            icon: "warning",
-        })
     }
-    
+
     localStorage.setItem("Promedios", JSON.stringify(baseDatos)) 
 }
 
