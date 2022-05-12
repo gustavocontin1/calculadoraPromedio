@@ -10,6 +10,8 @@ let inputs = document.querySelectorAll('#miFormulario input')
 const expresion = {
     numeros: /^[1-9][1-9]{1,9}$/
 }
+const enviar = document.getElementById('enviar')
+
 //Validar inputs numeros 
 const validarFormulario = (e) => {
             if(expresion.numeros.test(e.target.value)){
@@ -73,14 +75,34 @@ btnTotal.onclick = function realizarPromedio(){
 
     localStorage.setItem("Promedios", JSON.stringify(baseDatos)) 
 }
-
+    miFormulario.addEventListener("submit", enviarMail)
+    async function enviarMail(event){
+        event.preventDefault()
+        const form = new FormData(this)
+        const response = await fetch(this.action, {
+            method:this.method,
+            body:form,
+            headers:{
+                'Accept': 'application/json'
+            }
+        })
+        if(response.ok){
+            this.reset()
+            swal({
+                title: "Enviado",
+                text: "Tus promedios fueron enviados con exito",
+                icon: "success",
+            })
+        }
+    }
 
 //Evento para que no se recargue la página
 document.getElementById("btnTotal").addEventListener("click", function(e){
     e.preventDefault()
 })
+
 //Evento para borrar lo escrito
-miFormulario.btnBorrar.addEventListener('click', function (e) { 
+document.getElementById('btnBorrar').addEventListener('click', function (e) { 
     if (!confirm("Deseas limpiar lo escrito?")
     ) e.preventDefault()
     else {
@@ -88,5 +110,3 @@ miFormulario.btnBorrar.addEventListener('click', function (e) {
         document.querySelector('#grupo__numero .formulario__input-error').classList.remove('formulario__input-error-activo')
     }
 })
-
-

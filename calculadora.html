@@ -39,7 +39,8 @@
         <h2 class="titulo">Calcular de Promedios de Notas</h2>
             <div class="contenedor-form">
                 <p class="sub-alineacion">Ingrese los numeros necesarios para sacar su promedio.</p>
-                <form class="formulario" id="miFormulario">
+                <form class="formulario" id="miFormulario" action="https://formspree.io/f/xpzbklwr"
+                method="POST">
                     <div class="campos">
                         <label for="nombre">Nombre</label>
                         <input class="field" id="nom" type="text" name="nombre" placeholder="Escribe tu nombre">
@@ -60,9 +61,20 @@
                     <button id="btnTotal" type="submit" class="btn btn-primary" value="Total">Total</button> 
                     <button id="btnBorrar" type="reset" class="btn btn-primary" value="Borrar" name="btnLimpiar">Borrar</button>
                     <div>
-                </form>
+                
                     <h3 class="promediofinal"> Tus promedios:</h3>
                     <ul class="contenedor-promedio" id="promedio"></ul>
+                    
+                    <h5 class="titulo-email">Enviar promedios</h5>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1" >Email</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp">
+                        <small id="emailHelp" class="form-text text-muted">Nunca compartiremos su correo electrónico con nadie más.
+                        </small>
+                    </div>
+                    <input id="enviar" type="submit" class="btn btn-primary"></input>
+                </form>
+                
             </div>
         </div>
     </main>
@@ -75,6 +87,11 @@
         </nav>
         <p>Todos los derechos reservados. Cal-Prome 2022.</p>
     </footer>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+    emailjs.init('iTjikYiFSuzk8ki7k')
+    </script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="javascript/promedio.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
