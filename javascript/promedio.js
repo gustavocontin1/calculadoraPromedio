@@ -75,6 +75,7 @@ btnTotal.onclick = function realizarPromedio(){
 
     localStorage.setItem("Promedios", JSON.stringify(baseDatos)) 
 }
+//Utilizacion de API para enviar a un mail 
     miFormulario.addEventListener("submit", enviarMail)
     async function enviarMail(event){
         event.preventDefault()
